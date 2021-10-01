@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: adventureworks_etl
+    schema: public
+    description: This is the adventureworks erp postgres database replica
+    tables:
+      - name: salesorderheader
+      - name: product
+      - name: creditcard
+      - name: salesorderheadersalesreason
+      - name: salesreason
+      - name: customer
+      - name: salesterritory
+      - name: salesprovince
+      - name: address
+      - name: countryregion
