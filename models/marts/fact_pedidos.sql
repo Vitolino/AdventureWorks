@@ -3,7 +3,8 @@ with pedidos as (
     salesorderid as id_pedido_venda,
     creditcardid as id_cartao_credito,
     customerid as id_cliente,
-    billtoaddressid as id_endereco_cobranca /*é a chave que relaciona com o 'address.addressid' */
+    billtoaddressid as id_endereco_cobranca, /*é a chave que relaciona com o 'address.addressid' */
+    orderdate as data_pedido
 
     from{{source('adventureworks_etl','salesorderheader')}}
 ),
@@ -24,6 +25,7 @@ pedido_detalhado as (
     pedidos.id_cartao_credito,
     pedidos.id_cliente,
     pedidos.id_endereco_cobranca,
+    pedidos.data_pedido,
     detalhe_pedido.quantidade_pedida,
     detalhe_pedido.id_produto,
     detalhe_pedido.preco_unitario
