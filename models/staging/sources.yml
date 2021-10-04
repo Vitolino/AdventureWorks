@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: adventureworks_etl
-    schema: public
+    schema: adventureworks_etl
     description: This is the adventureworks erp postgres database replica
     tables:
       - name: salesorderheader
@@ -15,3 +15,5 @@ sources:
       - name: salesprovince
       - name: address
       - name: countryregion
+      - name: stateprovince
+      - name: salesorderdetail
